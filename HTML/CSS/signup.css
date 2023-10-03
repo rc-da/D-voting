@@ -30,9 +30,9 @@ body
 #login {
     margin-top: 20px;
     padding: 15px 80px;
-    background-color: #FFD2D2;
-    color: black;
-    border: 2px solid black;
+    background-color: black;
+    color: #FFD2D2;
+    border: 2px solid #FFD2D2;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -40,7 +40,6 @@ body
 .signup {
     height: 100vh;
     width: 60%;
-    /* background-color: #FFD2D2; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,6 +49,7 @@ body
 
 .signup h1
 {
+    color:#FFD2D2;
     font-size: 60px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
@@ -58,9 +58,9 @@ body
 
 #nameinput ,#passinput , #submitinput, #checkpassinput, #mailinput
 {
-    background-color: #FFD2D2;
+    background-color: black;
     border-radius: 15px;
-    border-color: black;
+    border-color: #FFD2D2;
     padding: 15px 60px;
 }
 
@@ -68,25 +68,31 @@ body
 {
     margin-top: 20px;
     padding: 15px 115px;
-    background-color: black;
-    color: #FFD2D2;
-    border: 2px solid #FFD2D2;
+    background-color: #FFD2D2;
+    color: black;
+    border: 2px solid black;
     border-radius: 15px;
     cursor: pointer;
 }
 
+::placeholder
+{
+    color: #FFD2D2;
+}
+
+
 #login:hover
 {   
-    color: #FFD2D2;
-    background-color:black;
-    border-color:#FFD2D2 ;
+    color: black;
+    background-color:#FFD2D2;
+    border-color:black;
 }
 
 #submitinput:hover
 {
-    color: black;
-    background-color:#FFD2D2;
-    border-color:black ;
+    color: #FFD2D2;
+    background-color:black;
+    border-color:#FFD2D2 ;
 }
 
 

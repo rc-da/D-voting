@@ -30,9 +30,9 @@ body
 #join {
     margin-top: 20px;
     padding: 15px 80px;
-    background-color: #dca66d;
-    color: black;
-    border: 2px solid black;
+    background-color: black;
+    color: #dca66d;
+    border: 2px solid #dca66d;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -61,32 +61,36 @@ body
 {
     border-radius: 15px;
     border-color: #dca66d;
+    background-color: black;
     padding: 15px 60px;
 }
-
+::placeholder
+{
+    color: #dca66d;
+}
 #submitinput
 {
     margin-top: 20px;
     padding: 15px 115px;
-    background-color: black;
-    color: #dca66d;
-    border: 2px solid #dca66d;
+    background-color: #dca66d;
+    color: black;
+    border: 2px solid black;
     border-radius: 15px;
     cursor: pointer;
 }
 
 #join:hover
 {   
-    color: #dca66d;
-    background-color: black;
-    border-color:#dca66d ;
+    color: black;
+    background-color: #dca66d;
+    border-color:black ;
 }
 
 #submitinput:hover
 {
-    color: black;
-    background-color:#dca66d;
-    border-color:black;
+    color: #dca66d;
+    background-color:black;
+    border-color:#dca66d;
 }
 
 

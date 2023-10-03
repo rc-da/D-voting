@@ -18,7 +18,7 @@ body, .head, .menu, .h1, ul, .body, .foot
 body
 {
     
-    background: linear-gradient( black 20%, #dca66d);
+    background: linear-gradient( black 40%, #dca66d);
     font-family: 'Gina';
 }
 .head
