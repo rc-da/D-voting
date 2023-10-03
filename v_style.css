@@ -1,0 +1,120 @@
+body, h1, .head, .body, .tablecontent
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+.head
+{
+    height: 150px;
+    width: 100%;
+    background-color: #98FB98;
+}
+
+.head #back
+{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 65px;
+    left: 4%;
+    z-index: 100;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+#back:hover
+{
+    background-color: #EBD7FF;
+}
+
+#result
+{ 
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.body
+{
+    height: 650px;
+    width: 100%;
+    background: linear-gradient(180deg, #98FB98 30%, white 80%);
+}
+
+.searchbar
+{
+    display:inline-block;
+    margin-left: 30%;
+}
+#search
+{
+    margin-top: 50px;
+    border-radius: 15px;
+    padding: 10px 100px ;
+}
+
+#searchbt
+{
+    border: 2px solid #EBD7FF;
+    margin-top: 30px;
+    margin-left: 35px;
+    border-color: black;
+    border-radius: 15px;
+    padding: 8px 40px;
+    background-color:#EBD7FF ;
+}
+
+#filterbt
+{
+    border: 2px solid #EBD7FF;
+    margin-left: 35px;
+    border-radius: 15px;
+    padding: 8px 40px;
+    background-color:#EBD7FF ;
+}
+
+#searchbt:hover, #filterbt:hover
+{
+    background-color:#b8f0ed ;
+    border-color: #5C5470 ;
+    color: #5C5470;
+}
+
+.tablecontent
+{
+    margin-top: 85px;
+}
+
+#table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 4px solid #5C5470;
+    border-radius: 15px;
+    width: 670px; /* Set the width of the table */
+}
+
+th, td 
+{
+    padding: 30px;
+    text-align: center;
+    border: 3px solid #5C5470;
+    font-size: 20px;
+    
+}
+th
+{
+    background-color:#EBD7FF ;
+}
+.foot
+{
+    text-align: center;
+}

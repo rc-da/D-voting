@@ -1,0 +1,105 @@
+body, .head, .menu, .h1, ul, .body, .foot
+{
+    padding: 0;
+    border: 0;
+    margin: 0;
+   
+}
+body
+{
+    
+    background: linear-gradient(190deg, #FFD2D2 40%, #86f0ea 70%);
+}
+.head
+{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1
+{
+    position: relative;
+    top: 25px;
+ 
+}
+
+.menu
+{
+    height: 70px;
+    width: 100%;
+}
+
+ul li
+{
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    padding: 25px;
+}
+li a
+{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-right: 40px;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+li a:hover
+{
+    color: white;
+}
+
+#login
+{
+    margin-left:300px;
+}
+#login, #signup
+{
+    padding: 10px 25px;
+    border-radius: 15px;
+    background-color:#86f0ea ;
+    border: 2px solid #FFD2D2;
+}
+
+#login:hover, #signup:hover
+{
+
+    background-color: #FFD2D2;
+    border-color: black;
+}
+
+.body
+{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#metaconnect
+{
+    margin-top: 70px;
+    padding: 15px 35px;
+    border-radius: 15px;
+    background-color: black;
+    color: #FFD2D2;
+    border: 2px solid;
+}
+
+#metaconnect:hover
+{
+    background-color: #86f0ea ;
+    color: black;   
+    border-color: black;
+}
+
+.foot
+{
+    text-align: center;
+}
