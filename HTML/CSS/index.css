@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Gina';
+    src: local('Gina Book'), local('Gina-Book'),
+        url('Gina-Book.woff2') format('woff2'),
+        url('Gina-Book.woff') format('woff'),
+        url('Gina-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body, .head, .menu, .h1, ul, .body, .foot
 {
     padding: 0;
@@ -8,7 +18,8 @@ body, .head, .menu, .h1, ul, .body, .foot
 body
 {
     
-    background: linear-gradient(#e66465, #919835);
+    background: linear-gradient( black 20%, #dca66d);
+    font-family: 'Gina';
 }
 .head
 {
@@ -23,6 +34,7 @@ h1
 {
     position: relative;
     top: 25px;
+    color: #dca66d;
  
 }
 
@@ -39,39 +51,36 @@ ul li
     position: relative;
     padding: 25px;
 }
-li a
-{
+li a {
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: #dca66d;
     margin-right: 40px;
     margin-left: 40px;
     font-size: 20px;
     font-weight: bold;
+    font-weight: normal;
+    transition: 6ms;
+    position: relative;
 }
 
-li a:hover
-{
-    color: white;
+li a::before,
+li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -8px;
+    background-color: #dca66d;
+    transition: width 0.3s;
 }
 
-#login
-{
-    margin-left:300px;
-}
-#login, #signup
-{
-    padding: 10px 25px;
-    border-radius: 15px;
-    background-color:#86f0ea ;
-    border: 2px solid #FFD2D2;
+li a::before {
+    left: 0;
 }
 
-#login:hover, #signup:hover
-{
-
-    background-color: #FFD2D2;
-    border-color: black;
+li a:hover::before {
+    width: 100%;
 }
 
 .body
@@ -87,19 +96,28 @@ li a:hover
     margin-top: 70px;
     padding: 15px 35px;
     border-radius: 15px;
-    background-color: black;
-    color: #FFD2D2;
+    background-color: #dca66d;
+    color: black;
     border: 2px solid;
 }
 
 #metaconnect:hover
 {
-    background-color: #86f0ea ;
-    color: black;   
-    border-color: black;
+    background-color: black ;
+    color: #dca66d;   
+    border-color: #dca66d;
 }
 
 .foot
 {
     text-align: center;
+
+}
+#login
+{
+    margin-left: 450px;
+}
+#signup
+{
+    margin-left: 0;
 }

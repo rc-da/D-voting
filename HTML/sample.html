@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hover Underline Effect</title>
+    <style>/* Style the anchor tag */
+.underline-hover::before, .underline-hover::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px; /* Adjust the height of the underline as needed */
+            bottom: 0;
+            background-color: #007bff; /* Underline color */
+            transition: width 0.3s; /* Smooth transition for width property */
+        }
+        
+        /* Initial state of the underline (hidden) */
+        .underline-hover::before {
+            left: 0;
+        }
+        
+        /* Hover state: reveal the underline */
+        .underline-hover:hover::before {
+            width: 100%;
+        }
+        
+        /* Hide the default underline on hover */
+        .underline-hover:hover {
+            text-decoration: none;
+        }
+        </style>
+</head>
+<body>
+    <a href="#" class="underline-hover">Hover me</a>
+</body>
+</html>

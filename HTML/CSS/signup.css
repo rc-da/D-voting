@@ -5,7 +5,7 @@ body, div, h1, button {
 }
 body
 {
-    background:linear-gradient(90deg, black 20%, #FFD2D2 90%);
+    background:linear-gradient(90deg, #FFD2D2 20%, black 90%);
 }
 
 .loginpage {
@@ -20,7 +20,7 @@ body
 }
 
 .loginpage h1 {
-    color: #FFD2D2;
+    color: black;
     font-size: 60px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
