@@ -88,3 +88,13 @@ body
     background-color:#FFD2D2;
     border-color:black ;
 }
+
+#x
+{
+    margin-left: 54%;
+    margin-top: 20px;
+    color: black;
+    font-size: 34px;
+    background-color: #FFD2D2;
+    cursor: pointer;
+}
