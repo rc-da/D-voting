@@ -98,10 +98,11 @@ body
 
 #x
 {
-    margin-left: 54%;
-    margin-top: 20px;
+    position: relative;
+    bottom: 750px;
+    left: 95%;
     color: #FFD2D2;
-    font-size: 34px;
-    background-color: black;
+    font-size: 40px;
+    background-color: black ;
     cursor: pointer;
 }
