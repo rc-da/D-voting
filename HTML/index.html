@@ -3,50 +3,72 @@
 <head>
     <title>D-Voting</title>
     <link rel="stylesheet" href="CSS/index.css">
+    <script>
+        async function connectwallet() {
+            try {
+                if (typeof window !== 'undefined' && typeof window.ethereum !== 'undefined') {
+                    const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+                    console.log("Connected accounts:", accounts);
+                } else {
+                    console.error("MetaMask or Ethereum not found.");
+                }
+            } catch (error) {
+                console.error("Error:", error.message);
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="head">
         <h1>D-Voting</h1>
     </div>
+
     <div class="menu">
-        
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="createpoll.html">Create Poll</a></li>
             <li><a href="vote.html">Vote</a></li>
             <li><a href="result.html">Result</a></li>
-            <li> <a href="#" id="wallet">Connect Wallet</a></li>
+            <li> <a id="wallet" onclick="connectwallet()">Connect Wallet</a></li>
             <li> <a href="login.html" id="login">Login</a></li>
             <li><a href="signup.html" id="signup">Signup </a></li>
         </ul>
     </div>
+
     <div class="body">
+
         <div class="intro">
            <h1><center> Welcome to D-Voting </center></h1> <br>
            <p>At D-Voting, we're dedicated to empowering individuals like you to participate in a secure, transparent, and decentralized voting experience. Our platform harnesses the power of blockchain technology to ensure the integrity and fairness of every vote casted. You can :</p>
+           
            <div class="logos">
                 <a href="createpoll.html"><img src="polling.png" height="50px" width="50px" class="cp"></a>
                 <a href="vote.html"><img src="vote.png" height="50px" width="50px" class="v"></a>
                 <a href="result.html"><img src="survey-results.png" height="50px" width="50px" class="r"></a>
             </div>
+            
         </div>
+
         <div class="getstarted">
             <h1>Get Started Today!</h1>
             <p>Getting started is a breeze:<br> Simply create your <a href="signup.html" id="d"><b>D-Voting account</b></a> to begin voting or crafting your own polls, and then connect your <a href="s#" id="m"><b>MetaMask Wallet</b></a> to either cast your vote or create a poll within D-Voting.
         </div>
+
         <div class="metaintro">
+
             <div class="metamask">
                 <h1>Why Connect MetaMask Wallet?</h1>
                 <p>Connecting your MetaMask wallet allows you <br> to securely cast your vote, ensuring the transparency <br>and integrity of the voting process.</p>
-            <button id="metaconnect" onclick="meta()"> CONNECT WALLET</button>
+            <button id="metaconnect" onclick="connectwallet()"> CONNECT WALLET</button>
             </div>
+
             <img src="metamask-logo.png" height="200px" width="200px" id="metaimg">
         </div>
-        
-       
     </div>
+
     <div class="foot">
         <h4>copyrights ©️ 2023</h4>
     </div>
+
 </body>
 </html>
