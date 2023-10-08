@@ -28,9 +28,9 @@
                 const lowercaseAccount = account.toLowerCase();
     
                 if (lowercaseAccountCheck === lowercaseAccount) {
-                    alert("Yo");
+                    alert("Yeah Wallet Connected Successfully !");
                 } else {
-                    alert("so sad");
+                    alert("Sorry Wallet is not Connected !!");
                 }
             } catch (error) {
                 console.log("Error:", error);
@@ -70,12 +70,11 @@
 <body>
     <div class="head">
         <div class="headel">
-            <h1 id="title">D-Voting</h1>
+            <a href="index.html" id="title">D-Voting</a>
             <button id="connectmeta" onclick="connectwallet()"> CONNECT WALLET</button>
         </div>
-        
     </div>
-
+   
     <div class="menu">
         <ul>
             <li><a href="index.html">Home</a></li>

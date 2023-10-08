@@ -54,7 +54,6 @@ body, h1, .head, .body, .tablecontent
 .searchbar
 {
     display:inline-block;
-    margin-left: 10%;
     position:relative;
     left: 32%;
 }
