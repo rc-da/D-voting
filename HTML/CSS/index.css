@@ -22,14 +22,37 @@ body
     font-family: 'Gina';
 }
 
+p a
+{
+    text-decoration-color: #dca66d;
+    color: black;
+}
+
 .head
 {
     height: 150px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
+
+#title
+{
+    position: relative;
+    left: 50%;
+}
+
+#connectmeta
+{
+    position: relative;
+    top: 20px;
+    left: 75%;
+}
+
+.headel
+{
+    display: flex;
+    flex-direction: row;
+}
+
 
  .head h1
 {
@@ -60,7 +83,7 @@ li a {
     text-align: center;
     text-decoration: none;
     color: black;
-    margin-right: 40px;
+    margin-right: 80px;
     margin-left: 40px;
     font-size: 25px;
     font-weight: bold;
@@ -164,7 +187,7 @@ li a:hover::before {
     gap: 30px;
 }
 
-#metaconnect
+#metaconnect, #connectmeta
 {
     margin-top: 30px;
     padding: 15px 35px;
@@ -174,7 +197,7 @@ li a:hover::before {
     background-color: #f1efe9;
 }
 
-#metaconnect:hover
+#metaconnect:hover, #connectmeta:hover
 {
     color: #f5841f;   
 }
