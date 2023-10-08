@@ -151,16 +151,19 @@ li a:hover::before {
 }
 .metamask
 {       
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
-#metaimg
+
+.metabody
 {
-    margin-top: 240px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
+
 #metaconnect
 {
     margin-top: 30px;

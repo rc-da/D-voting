@@ -16,7 +16,7 @@
                     console.error("MetaMask or Ethereum not found.");
                 }
             } catch (error) {
-                console.error("Error:", error.message);
+                console.log("Error:");
             }
         }
 
@@ -62,12 +62,14 @@
         <div class="metaintro">
 
             <div class="metamask">
-                <h1>Why Connect MetaMask Wallet?</h1>
-                <p>Connecting your MetaMask wallet allows you <br> to securely cast your vote, ensuring the transparency <br>and integrity of the voting process.</p>
-            <button id="metaconnect" onclick="connectwallet()"> CONNECT WALLET</button>
+                <h1>Why Connect MetaMask Wallet?</h1><br>
+                <div class="metabody">
+                    <p>Connecting your MetaMask wallet allows you <br> to securely cast your vote, ensuring the transparency <br>and integrity of the voting process.</p><br>
+                    <img src="metamask-logo.png" height="200px" width="200px" id="metaimg">
+                </div>
+                 <button id="metaconnect" onclick="connectwallet()"> CONNECT WALLET</button>
             </div>
 
-            <img src="metamask-logo.png" height="200px" width="200px" id="metaimg">
         </div>
     </div>
 
