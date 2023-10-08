@@ -4,11 +4,14 @@ body, h1, .head, .body, .tablecontent
     margin: 0;
     padding: 0;
 }
+.head,.body{
+    background-color: rgb(227, 227, 235);
+}
 .head
 {
     height: 150px;
     width: 100%;
-    background-color: #98FB98;
+     
 }
 
 .head #back
@@ -47,39 +50,42 @@ body, h1, .head, .body, .tablecontent
 {
     height: 650px;
     width: 100%;
-    background: linear-gradient(180deg, #98FB98 30%, white 80%);
 }
 
 .searchbar
 {
     display:inline-block;
-    margin-left: 30%;
+    position:relative;
+    left: 32%;
 }
 #search
 {
     margin-top: 50px;
+    border-color: #000000;
+    background-color: white;
     border-radius: 15px;
-    padding: 10px 100px ;
+    padding: 8px 10px ;
+    width: 500px;
 }
 
 #searchbt
 {
-    border: 2px solid #EBD7FF;
-    margin-top: 30px;
+    border: 2px solid black;
     margin-left: 35px;
-    border-color: black;
     border-radius: 15px;
     padding: 8px 40px;
-    background-color:#EBD7FF ;
+    color:black ;
+    background-color: white;
 }
-
-#filterbt
+#filter
 {
-    border: 2px solid #EBD7FF;
+    border: 2px solid black;
     margin-left: 35px;
     border-radius: 15px;
     padding: 8px 40px;
-    background-color:#EBD7FF ;
+    color:black ;
+    background-color: white;
+    
 }
 
 #searchbt:hover, #filterbt:hover
@@ -92,27 +98,36 @@ body, h1, .head, .body, .tablecontent
 .tablecontent
 {
     margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#table {
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 4px solid #5C5470;
-    border-radius: 15px;
-    width: 670px; /* Set the width of the table */
+.group{
+
+    border: 1px solid black;
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    text-decoration: underline #dca66d93;
+    position: relative;
+    left: 75px;
+    top: 100px;
+    border-radius: 20px;
+    padding:10
+}
+.group_container{
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(300px,.1fr));
+    gap: .5rem;
+    margin:1rem;
 }
 
-th, td 
-{
-    padding: 30px;
-    text-align: center;
-    border: 3px solid #5C5470;
-    font-size: 20px;
-    
-}
-th
-{
-    background-color:#EBD7FF ;
+.group_cnt{
+    max-width: 300px;
+    color: #d39048;
+    position:relative;
+    border-top-right-radius: 19px;
+    border-top-left-radius: 19px;
 }
 .foot
 {
