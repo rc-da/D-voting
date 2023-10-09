@@ -32,7 +32,8 @@ p a
 {
     height: 100px;
     width: 100%;
-    background-color:#dca66d7a;
+    background: linear-gradient(#f5841f5a, #f1efe9);
+    /* background-color:#dca66d7a; */
 }
 
 .headel #title
