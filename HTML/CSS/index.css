@@ -216,7 +216,6 @@ li a:hover::before {
 #metaconnect:hover, #connectmeta:hover
 {
     color: #f5841f;   
-    background-color: black;
     border-color: #f5841f ;
 }
 
