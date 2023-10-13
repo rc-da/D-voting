@@ -1,37 +1,17 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="CSS/createpoll.css">
-    <script>
-        function validate() {
-            var username = document.querySelector('input[type="text"]').value;
-            var peopinput = document.querySelector('input[type="text"]').value;
-
-            if (!username === "" && peopinput === "") {
-                alert("join successful!");
-                return true; 
-            } 
-            else {
-                alert("join failed. Please check your credentials.");
-                return false; 
-            }
-        }
-    </script>
-    <script>
-        function join(){
-            window.location.href = 'vote.html';
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="../CSS/createpoll.css">
 </head>
 
 <body>
     <div class="loginpage">
         <h1>JOIN<br>EXISTING <br>PARTY</h1>
-        <button id="join" onclick="join()">JOIN</button>
+        <button id="join" ></button>JOIN</button>
     </div>
 
     <div class="createpoll">
         <h1>CREATE POLL</h1>
-        <form id="forms" onsubmit="return validate()">
+        <form id="forms">
             <input id="nameinput" type="text" placeholder="username"><br><br>
             <input id="mailinput" type="email" placeholder="mail-id"><br><br>
             <input id="candiate" type="text" placeholder="no. of candidate"><br><br>
