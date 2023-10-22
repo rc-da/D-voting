@@ -20,7 +20,7 @@ body
     
     background-color: #f1efe9;
     font-family: 'Gina';
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 p a
@@ -122,19 +122,20 @@ li a:hover::before {
 .body
 {
     height: 120%;
-    width: 240%;
+    width: 100%;
     display: flex;
-    
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
     align-items: center;
     
 }
 .body >div
 {
-    margin-left: 9%;
+    /* margin-left: 9%; */
     height:60%;
     width: 80%;
     text-align: center;
+    margin-top: 10%;
 }
 .intro
 {
