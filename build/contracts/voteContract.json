@@ -1,0 +1,119 @@
+{
+  "contractName": "voteContract",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/voteContrat.sol\":\"voteContract\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/voteContrat.sol\":{\"keccak256\":\"0xe1411c3eb86a1a81c7bb390e8e7bb18b126fdcce6218b85ff994c29bece60741\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://166428ee9ec7b35684f5fd28d677bb858d81d0230aaa45210a66f18671e74dba\",\"dweb:/ipfs/QmPtknL1EUTLvBvTyyWbEN62wRcy2opafq2wFA5wzXeGDq\"]}},\"version\":1}",
+  "bytecode": "0x60806040526015600055348015601457600080fd5b50603f8060226000396000f3fe6080604052600080fdfea264697066735822122091b2f126bf1416c929a99273ca13736419171b00e85feb237b3f8b1ef69ec7de64736f6c63430008120033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122091b2f126bf1416c929a99273ca13736419171b00e85feb237b3f8b1ef69ec7de64736f6c63430008120033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "80:45:0:-:0;;;119:2;110:11;;80:45;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "80:45:0:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: SEE LICENSE IN LICENSE\r\npragma solidity ^0.8.18;\r\n\r\ncontract voteContract\r\n{\r\n    uint a = 21;\r\n}",
+  "sourcePath": "E:\\projects\\mini project\\decentralised voting\\D-voting\\contracts\\voteContrat.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/voteContrat.sol",
+    "exportedSymbols": {
+      "voteContract": [
+        5
+      ]
+    },
+    "id": 6,
+    "license": "SEE LICENSE IN LICENSE",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "52:24:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "voteContract",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "voteContract",
+        "nameLocation": "89:12:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "mutability": "mutable",
+            "name": "a",
+            "nameLocation": "115:1:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 5,
+            "src": "110:11:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "110:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "3231",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "119:2:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_21_by_1",
+                "typeString": "int_const 21"
+              },
+              "value": "21"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 6,
+        "src": "80:45:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "52:73:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.18+commit.87f61d96.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2023-10-22T18:33:22.585Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
