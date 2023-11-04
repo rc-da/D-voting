@@ -3,23 +3,44 @@
 <head>
     <title>Create Poll</title>
     <link rel="stylesheet" href="../CSS/createpoll.css">
+    <script>
+        function menu() {
+            window.location.href = "menu.html"
+        }
+        function displayit(){
+            overlay.style.display = 'flex';
+        }
+        function hide(){
+            overlay.style.display = 'none';
+        }
+    </script>
 </head>
 <body>
-
-        <header class="head">
-            <nav>
-                <h4>=</h4>
-            </nav>
-            <a href="createpoll.html">Create Poll</a>
-        </header>
+    <header class="head">
+        <nav>
+                <h1 id="open-menu" onclick="displayit()" style="font-size: 50px;">=</h1>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <h1 id="close-menu" onclick="hide()">Close</h1>
+                    <ul id="menucontent">
+                        <li><a href="index.html" id="tag" >Home</a></li>
+                        <li><a href="createpoll.html"  id="tag">Create Poll</a></li>
+                        <li><a href="vote.html" id="tag">Vote</a></li>
+                        <li><a href="result.html" id="tag">Result</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <a href="createpoll.html">Create Poll</a>
+    </header>
 
     <div class="body">
         <form class="creation">
-            <input type="button" value="Group Icon" id="groupicon" class="l" style="padding: 0 16%;"> <br>
+            <input type="button" value="Group Icon" id="groupicon" class="l" style="padding: 0 16%;"><br>
             <input type="text" id="groupname" class="l" placeholder="Group Name">
-            <input type="text" id="question" class="l" placeholder="Question"> 
-            <input type="button" value="+ Add Option" id="option" class="l" style="padding: 0 14%;"> 
-            <input type="submit" value="Create" id="create" class="l" style="padding: 0 20%; ">          
+            <input type="text" id="question" class="l" placeholder="Question">
+            <input type="button" value="+ Add Option" id="option" class="l" style="padding: 0 14%;">
+            <input type="submit" value="Create" id="create" class="l" style="padding: 0 20%;">
         </form>
     </div>
 </body>

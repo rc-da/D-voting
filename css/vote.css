@@ -1,8 +1,21 @@
+@font-face {
+    font-family: 'Gina';
+    src: local('Gina Book'), local('Gina-Book'),
+        url('Gina-Book.woff2') format('woff2'),
+        url('Gina-Book.woff') format('woff'),
+        url('Gina-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 body, h1, .head, .body, .tablecontent
 {
     border: 0;
     margin: 0;
     padding: 0;
+    font-family: 'Gina';
 }
 
 .head,.body{
@@ -15,26 +28,55 @@ body, h1, .head, .body, .tablecontent
      
 }
 
-.head #back
-{
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 8px 15px;
-    text-decoration: none;
-    color: black;
-    position: relative;
-    top: 65px;
-    left: 4%;
-    z-index: 100;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    cursor: pointer;
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
-#back:hover
+.overlay-content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dca66d;
+    z-index: 2;
+}
+#menucontent
 {
-    background-color: #EBD7FF;
+    list-style: none;
+    margin-top:10%;
+}
+#menucontent li
+{
+    margin-bottom: 4%;
+}
+#closemenu
+{
+    position: relative;
+    left: -10%;
+}
+#tag
+{
+    text-decoration: none;
+    color: black;
+}
+
+#tag:hover
+{
+    color: antiquewhite;
+}
+
+#closemenu
+{
+    opacity: 0;
 }
 
 #result
@@ -49,7 +91,7 @@ body, h1, .head, .body, .tablecontent
 
 .body
 {
-    height: 650px;
+    height: 100vh;
     width: 100%;
 }
 

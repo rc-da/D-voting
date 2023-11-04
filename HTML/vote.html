@@ -6,10 +6,28 @@
     <title>Vote</title>
     <link rel="stylesheet" href="../css/vote.css">
     <script src="../script/script.js" defer></script>
+    <script>                
+    function displayit(){
+        overlay.style.display = 'flex';
+    }
+    function hide(){
+        overlay.style.display = 'none';
+    }</script>
 </head>
 <body>
     <div class="head">
-        <a href="index.html" id="back">⬅ Back</a>
+            <h1 id="open-menu" onclick="displayit()" style="font-size: 50px;">=</h1>
+        <div id="overlay" class="overlay">
+            <div class="overlay-content">
+                <h1 id="close-menu" onclick="hide()">Close</h1>
+                <ul id="menucontent">
+                    <li><a href="index.html" id="tag" >Home</a></li>
+                    <li><a href="createpoll.html"  id="tag">Create Poll</a></li>
+                    <li><a href="vote.html" id="tag">Vote</a></li>
+                    <li><a href="result.html" id="tag">Result</a></li>
+                </ul>
+            </div>
+        </div>
         <h1 id="result">Vote</h1>
     </div>
     <div class="body">

@@ -32,13 +32,64 @@ body
     justify-content: center;
     background: linear-gradient( #f1efe9, #f5841f5a);
 }
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.overlay-content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #dca66d;
+    z-index: 2;
+}
+#menucontent
+{
+    list-style: none;
+    margin-top:10%;
+}
+#menucontent li
+{
+    margin-bottom: 4%;
+}
+#closemenu
+{
+    position: relative;
+    left: -10%;
+}
+#tag
+{
+    text-decoration: none;
+    color: black;
+}
+
+#tag:hover
+{
+    color: antiquewhite;
+}
+
+#closemenu
+{
+    opacity: 0;
+}
 a
 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     text-decoration: none;
     color: black;
 }
+
 nav
 {
     position: relative;
