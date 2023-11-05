@@ -15,21 +15,23 @@
     }</script>
 </head>
 <body>
-    <div class="head">
-            <h1 id="open-menu" onclick="displayit()" style="font-size: 50px;">=</h1>
-        <div id="overlay" class="overlay">
-            <div class="overlay-content">
-                <h1 id="close-menu" onclick="hide()">Close</h1>
-                <ul id="menucontent">
-                    <li><a href="index.html" id="tag" >Home</a></li>
-                    <li><a href="createpoll.html"  id="tag">Create Poll</a></li>
-                    <li><a href="vote.html" id="tag">Vote</a></li>
-                    <li><a href="result.html" id="tag">Result</a></li>
-                </ul>
+    <header class="head">
+        <nav>
+                <h1 id="open-menu" onclick="displayit()" style="font-size: 50px;">=</h1>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <h1 id="closemenu" onclick="hide()">X</h1>
+                    <ul id="menucontent">
+                        <li><a href="index.html" id="tag" >Home</a></li>
+                        <li><a href="createpoll.html"  id="tag">Create Poll</a></li>
+                        <li><a href="vote.html" id="tag">Vote</a></li>
+                        <li><a href="result.html" id="tag">Result</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <h1 id="result">Vote</h1>
-    </div>
+        </nav>
+        <a href="vote.html">Vote</a>
+    </header>
     <div class="body">
         <div class="searchbar">
             <input type="search" placeholder="Party code" id="search" data-search>
@@ -38,24 +40,6 @@
             
             
         </div>
-        <div class="group_container" data-user-cards-container></div>
-        <template data-user-template>
-            <div class="group">
-                <a href="vote_booth.html">
-                <div class="group_cnt"><img src="" alt="team_cat_image_0001" class="group_cnt"></div>
-                <div class="group_cnt" data-header> <h4></h4></div>
-                <div class="group_cnt" data-body><h2></h2> </div>
-                <div class="group_cnt" > <h5>date</h5></div>
-                </a>
-            </div>
-        </template>
-        
-        
-    </div>
-    
 
-    <div class="foot">
-        <h4>copyrights ©️ 2023</h4>
-    </div>
 </body>
 </html>

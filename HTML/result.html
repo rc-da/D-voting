@@ -15,21 +15,23 @@
     </script>
 </head>
 <body>
-    <div class="head navbar" >
-            <h1 id="open-menu" onclick="displayit()" style="font-size: 50px;">=</h1>
-        <div id="overlay" class="overlay">
-            <div class="overlay-content">
-                <h1 id="close-menu" onclick="hide()">Close</h1>
-                <ul id="menucontent">
-                    <li><a href="index.html" id="tag" >Home</a></li>
-                    <li><a href="createpoll.html"  id="tag">Create Poll</a></li>
-                    <li><a href="vote.html" id="tag">Vote</a></li>
-                    <li><a href="result.html" id="tag">Result</a></li>
-                </ul>
+    <header class="head">
+        <nav>
+                <h1 id="open-menu" onclick="displayit()" style="font-size: 50px;">=</h1>
+            <div id="overlay" class="overlay">
+                <div class="overlay-content">
+                    <h1 id="closemenu" onclick="hide()">X</h1>
+                    <ul id="menucontent">
+                        <li><a href="index.html" id="tag" >Home</a></li>
+                        <li><a href="createpoll.html"  id="tag">Create Poll</a></li>
+                        <li><a href="vote.html" id="tag">Vote</a></li>
+                        <li><a href="result.html" id="tag">Result</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <h1 id="result" class="navbar_items">RESULTS</h1>
-    </div>
+        </nav>
+        <a href="result.html">Result</a>
+    </header>
     <div class="body">
         <div class="searchbar">
             <input type="search" placeholder="Party code " id="search">
@@ -39,24 +41,5 @@
             
         </div>
         
-        <div class="group">
-            <a href="">
-
-            <div class="group_cnt"><img src="../img/gettyimages-89573119-612x612.jpg" class="group_cnt"></div>
-            <div class="group_cnt"> <h4>CODE-CODE-CODE</h4></div>
-            <div class="group_cnt"> <h2>THE Group</h2> </div>
-            <div class="group_cnt"> <h5>date:12/12/12</h5></div>
-        </a>
-    
-    
-        </div>
-    
-    </div>
-    
-    <a href="index.html">Home</a>
-
-    <div class="foot">
-        <h4 id="copyrights">copyrights ©️ 2023</h4>
-    </div>
 </body>
 </html>
