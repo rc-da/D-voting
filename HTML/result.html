@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results</title>
+    <title>result</title>
     <link rel="stylesheet" href="../css/result.css">
-    <script>
-                function displayit(){
-            overlay.style.display = 'flex';
-        }
-        function hide(){
-            overlay.style.display = 'none';
-        }
+    <script src="../script/script.js" defer></script>
+    <script>                
+    function displayit(){
+        overlay.style.display = 'flex';
+    }
+    function hide(){
+        overlay.style.display = 'none';
+    }
     </script>
+    <script src="../script/resultscript.js"></script>
 </head>
 <body>
     <header class="head">
@@ -34,12 +36,17 @@
     </header>
     <div class="body">
         <div class="searchbar">
-            <input type="search" placeholder="Party code " id="search">
+            <input type="search" placeholder="Party code" id="search" data-search>
             <button id="searchbt">Search</button>
-            <button id="filter">Filter</button>
-            
-            
+            <button id="searchbt">Filter</button>
+        </div>
+
+        <div class="allgroup" id="allgroup">
+
         </div>
         
+    </div>
+
+
 </body>
 </html>

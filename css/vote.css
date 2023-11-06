@@ -10,7 +10,7 @@
 
 
 
-body, h1, .head, .body, .tablecontent
+body, h1, .head, .body, ul
 {
     border: 0;
     margin: 0;
@@ -18,9 +18,6 @@ body, h1, .head, .body, .tablecontent
     font-family: 'Gina';
 }
 
-.head,.body{
-    background-color: rgb(227, 227, 235);
-}
 .head
 {
     height: 100px;
@@ -29,6 +26,7 @@ body, h1, .head, .body, .tablecontent
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(#dca66d, #b8f0ed);
 }
 .overlay {
     display: none;
@@ -106,8 +104,9 @@ nav
 
 .body
 {
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    background-color:#b8f0ed;
 }
 
 .searchbar
@@ -148,8 +147,42 @@ nav
 
 #searchbt:hover, #filterbt:hover
 {
-    background-color:#b8f0ed ;
-    border-color: #5C5470 ;
-    color: #5C5470;
+    background-color:#dca66d;
 }
 
+.allgroup
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+
+}
+.group
+{
+    height: 250px;
+    width: 250px;
+    background-color: #000000;
+    border: 1px black;
+    border-radius: 25px;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+ul li
+{
+    list-style: none;
+    color: antiquewhite;
+}
+.group img
+{
+    height:130px;
+    width:170px;
+    border-radius: 15px;
+}

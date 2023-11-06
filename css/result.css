@@ -9,13 +9,15 @@
 }
 
 
-body, h1, .head, .body, .tablecontent
+
+body, h1, .head, .body, ul
 {
     border: 0;
     margin: 0;
     padding: 0;
     font-family: 'Gina';
 }
+
 .head
 {
     height: 100px;
@@ -24,6 +26,7 @@ body, h1, .head, .body, .tablecontent
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(#5C5470, #dca66d);
 }
 .overlay {
     display: none;
@@ -80,11 +83,7 @@ a
     text-decoration: none;
     color: black;
 }
-/* #closemenu
-{
-    position: relative;
-    left: 1px;
-} */
+
 nav
 {
     position: relative;
@@ -92,19 +91,29 @@ nav
     cursor: pointer;
 }
 
+
+#result
+{ 
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .body
 {
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background-color: white;
-    text-decoration: underline rgba(245, 222, 179, 0.568);
+    background-color: #dca66d;
 }
 
 .searchbar
 {
     display:inline-block;
     position:relative;
-    left: 32%;
+    left: 30%;
 }
 #search
 {
@@ -122,27 +131,60 @@ nav
     margin-left: 35px;
     border-radius: 15px;
     padding: 8px 40px;
-    color:#dca66d ;
+    color:black ;
     background-color: white;
 }
-
 #filter
 {
     border: 2px solid black;
     margin-left: 35px;
     border-radius: 15px;
     padding: 8px 40px;
-    color:#dca66d ;
+    color:black ;
     background-color: white;
     
 }
 
-#searchbt:hover, #filter:hover,#back:hover
+#searchbt:hover, #filterbt:hover
 {
-    background-color:#000000 ;
-    border-color: #ffffff ;
-    color: #dca66d;
-    text-decoration:underline #dca66d;
+    background-color:#b8f0ed ;
+    border-color: #5C5470 ;
+    color: #5C5470;
 }
 
+.allgroup
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
 
+}
+.group
+{
+    height: 250px;
+    width: 250px;
+    background-color: #000000;
+    border: 1px black;
+    border-radius: 25px;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+ul li
+{
+    list-style: none;
+    color: antiquewhite;
+}
+.group img
+{
+    height:130px;
+    width:170px;
+    border-radius: 15px;
+}

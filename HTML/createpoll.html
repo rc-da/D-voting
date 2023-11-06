@@ -14,6 +14,7 @@
             overlay.style.display = 'none';
         }
     </script>
+    <script src="../script/createpollscript.js"></script>
 </head>
 <body>
     <header class="head">
@@ -36,12 +37,14 @@
 
     <div class="body">
         <form class="creation">
-            <input type="button" value="Group Icon" id="groupicon" class="l" style="padding: 0 16%;"><br>
-            <input type="text" id="groupname" class="l" placeholder="Group Name">
-            <input type="text" id="question" class="l" placeholder="Question">
-            <input type="button" value="+ Add Option" id="option" class="l" style="padding: 0 14%;">
+            <input type="button" name="groupImg" value="Group Icon" id="groupicon" class="l" style="padding: 0 16%;">
+            <br>
+            <input type="text" name="groupName"  id="groupname" class="l" placeholder="Group Name">
+            <input type="text" name="groupQuestion" id="question" class="l" placeholder="Question"> 
+            <input type="button"  value="+ Add Option" id="option" class="l" style="padding: 0 14%;">
             <input type="submit" value="Create" id="create" class="l" style="padding: 0 20%;">
         </form>
+        
     </div>
 </body>
 </html>

@@ -1,0 +1,12 @@
+{
+  "name": "d-voting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "scripts": {
+    "start": "json-server --watch ./database/database.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
