@@ -26,7 +26,7 @@ body, h1, .head, .body, ul
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#5C5470, #dca66d);
+    background: linear-gradient(white, #5C5470);
 }
 .overlay {
     display: none;
@@ -106,7 +106,7 @@ nav
 {
     height: 100%;
     width: 100%;
-    background-color: #dca66d;
+    background-color: #5C5470;
 }
 
 .searchbar
