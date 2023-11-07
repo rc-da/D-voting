@@ -1,9 +1,19 @@
 {
   "allgroup": [
     {
-      "groupImg": "../client/img/cat.jpg",
-      "groupName": "nothing",
-      "groupCode": "ohoo"
+      "groupImg": "../img/metamask-logo.png",
+      "groupName": "NOTHING",
+      "groupCode": "43526"
+    },
+    {
+      "groupImg": "../img/polling.png",
+      "groupName": "MINI",
+      "groupCode": "98736"
+    },
+    {
+      "groupImg": "../img/vote.png",
+      "groupName": "PROJECT",
+      "groupCode": "18936"
     }
   ]
 }

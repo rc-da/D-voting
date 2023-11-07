@@ -3,7 +3,7 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static( 'client'));
 
 app.get('/database', (req, res) => {
   try {
