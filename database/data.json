@@ -1,17 +1,14 @@
 {
-  "allgroup": [
-    {
-      "groupImg": "../client/img/cat.jpg",
+  "allgroup": {
+    "1": {
       "groupName": "nothing",
-      "groupCode": "ohoo"
+      "groupQuestion": "rsfrg",
+      "groupCode": 1
     },
-    {
+    "2": {
       "groupName": "j05u9t",
-      "groupQuestion": "rsfrg"
-    },
-    {
-      "groupName": "dhinesh",
-      "groupQuestion": "ntg"
+      "groupQuestion": "rsfrg",
+      "groupCode": 2
     }
-  ]
+  }
 }
