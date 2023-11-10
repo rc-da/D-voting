@@ -1,9 +1,9 @@
 {
-  "allgroup": [
-    {
-      "groupImg": "../client/img/cat.jpg",
+  "allgroup": {
+    "1": {
       "groupName": "nothing",
-      "groupCode": "ohoo"
+      "groupQuestion": "ntg",
+      "groupCode": 1
     }
-  ]
+  }
 }
