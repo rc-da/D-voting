@@ -118,8 +118,8 @@ nav
 #search
 {
     margin-top: 50px;
-    border-color: #000000;
-    background-color: white;
+    border-color: 0;
+    background-color: #dca66d;
     border-radius: 15px;
     padding: 8px 10px ;
     width: 500px;
@@ -127,25 +127,17 @@ nav
 
 #searchbt
 {
-    border: 2px solid black;
+    border: 0;
     margin-left: 35px;
     border-radius: 15px;
     padding: 8px 40px;
     color:black ;
-    background-color: white;
-}
-#filter
-{
-    border: 2px solid black;
-    margin-left: 35px;
-    border-radius: 15px;
-    padding: 8px 40px;
-    color:black ;
-    background-color: white;
-    
+    background-color: #dca66d;
+    cursor: pointer;
 }
 
-#searchbt:hover, #filterbt:hover
+
+#searchbt:hover
 {
     background-color:#dca66d;
 }
@@ -167,7 +159,7 @@ nav
     background-color: #000000;
     border: 1px black;
     border-radius: 25px;
-    margin-right: 5%;
+    margin: 4%;
     display: flex;
     flex-direction: column;
     justify-content: center;

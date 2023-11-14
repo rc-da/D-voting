@@ -4,9 +4,6 @@
     <title>Create Poll</title>
     <link rel="stylesheet" href="../css/createpoll.css">
     <script>
-        function menu() {
-            window.location.href = "menu.html"
-        }
         function displayit(){
             overlay.style.display = 'flex';
         }
@@ -37,14 +34,22 @@
 
     <div class="body">
         <form class="creation">
-            <input type="button" name="groupImg" value="Group Icon" id="groupicon" class="l" style="padding: 0 16%;">
-            <br>
             <input type="text" name="groupName"  id="groupname" class="l" placeholder="Group Name">
             <input type="text" name="groupQuestion" id="question" class="l" placeholder="Question"> 
-            <input type="button"  value="+ Add Option" id="option" class="l" style="padding: 0 14%;">
+            <input type="text"  name="option1" id="option1" class="l" placeholder="Option 1">
+            <input type="text"  name="option2" id="option2" class="l" placeholder="Option 2">
+            <input type="text"  name="option3" id="option3" class="l" placeholder="Option 3">
             <input type="submit" value="Create" id="create" class="l" style="padding: 0 20%;">
         </form>
-        
+    </div>
+
+    <div class="postInfo" id="postInfo" style="text-align: center;">
+        <div class="postContent" id="postContent">
+            <ul id="content" style="text-align: center;">
+                
+            </ul>
+
+        </div>
     </div>
 </body>
 </html>

@@ -134,18 +134,8 @@ nav
     color:black ;
     background-color: white;
 }
-#filter
-{
-    border: 2px solid black;
-    margin-left: 35px;
-    border-radius: 15px;
-    padding: 8px 40px;
-    color:black ;
-    background-color: white;
-    
-}
 
-#searchbt:hover, #filterbt:hover
+#searchbt:hover
 {
     background-color:#b8f0ed ;
     border-color: #5C5470 ;
