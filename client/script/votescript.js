@@ -46,6 +46,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       newGroup.appendChild(ul);
+      newGroup.addEventListener("click", function(){
+        const booth = document.getElementById("booth");
+        const ul = document.getElementById("content")
+
+        const li1 = document.createElement("li");
+        li1.textContent = group.groupQuestion;
+        const li2 = document.createElement("li");
+        li2.textContent = group.option1;
+        const li3 = document.createElement("li");
+        li3.textContent = group.option2;
+        const li4 = document.createElement("li");
+        li4.textContent = group.option3;
+        
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        ul.appendChild(li4);
+        booth.style.display = 'flex';
+
+      })
       allGroup.appendChild(newGroup);
   }
 });
+

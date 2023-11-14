@@ -28,7 +28,7 @@ body, h1, .head, .body, ul
     justify-content: center;
     background: linear-gradient(#dca66d, #b8f0ed);
 }
-.overlay {
+.overlay , .booth{
     display: none;
     position: fixed;
     top: 0;
@@ -39,7 +39,7 @@ body, h1, .head, .body, ul
     z-index: 1;
 }
 
-.overlay-content {
+.overlay-content , .boothContent{
     height: 100%;
     width: 100%;
     position: absolute;
