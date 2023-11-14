@@ -47,6 +47,7 @@ var account = null;
                     bt2.style.pointerEvents = "none";
                 } else {
                     alert("MetaMask is not installed !!");
+                    window.open("https://metamask.io/")
                 }
             } catch (error) {
                 console.log("Error:", error);

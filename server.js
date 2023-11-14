@@ -1,54 +1,58 @@
 const express = require("express");
 const app = express();
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 
-app.use(express.static( 'client'));
 
-app.get('/database', (req, res) => {
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'client')));
+
+
+const dataFilePath = path.join(__dirname, 'database', 'data.json');
+
+app.get('/database', async (req, res) => {
   try {
-    const filePath = path.join(__dirname, 'database', 'data.json');
-    let jsonData = {};
-
-    if (fs.existsSync(filePath)) {
-      const data = fs.readFileSync(filePath, 'utf8');
-      jsonData = JSON.parse(data);
-    }
-
+    const data = await fs.readFile(dataFilePath, 'utf8');
+    const jsonData = JSON.parse(data);
     res.json(jsonData);
   } catch (error) {
-    console.error("Error reading the data file:", error);
+    console.error( error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
-app.post('/database', (req, res) => {
+app.post('/database', async (req, res) => {
+  try {
+    const { jsonContent, textContent } = req.body;
+
+    let jsonData = {};
     try {
-      const newData = req.body;
-  
-      const filePath = path.join(__dirname, 'database', 'data.json');
-      let jsonData = {};
-  
-      if (fs.existsSync(filePath)) {
-        const data = fs.readFileSync(filePath, 'utf8');
-        jsonData = JSON.parse(data);
-      }
-  
-      if (!jsonData.allgroup) {
-        jsonData.allgroup = [];
-      }
-  
-      jsonData.allgroup.push(newData);
-      fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2), 'utf8');
-  
+      const data = await fs.readFile(dataFilePath, 'utf8');
+      jsonData = JSON.parse(data);
+    } catch (readError) {
+      console.log("File not found ")
+    }
+
+    if (!jsonData.allgroup) {
+      jsonData.allgroup = {};
+    }
+    console.log(textContent, jsonContent)
+    jsonData.allgroup[textContent] = jsonContent;
+
+    try {
+      await fs.writeFile(dataFilePath, JSON.stringify(jsonData, null, 2), 'utf8');
       res.json(jsonData);
-    } catch (error) {
-      console.error("Error updating the data:", error);
+    } catch (writeError) {
+      console.error("Error writing to the data file:", writeError);
       res.status(500).json({ error: "Internal Server Error" });
     }
-  });
-  
+  } catch (error) {
+    console.error("Error handling POST request:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
