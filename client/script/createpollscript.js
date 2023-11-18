@@ -65,7 +65,7 @@ function popup(updatedData)
   ul.appendChild(li3);
   bt.textContent = "Start vote"
   bt.addEventListener('click', function(){
-    window.open("vote.html")
+    window.location.href = "vote.html"
   })
   postContent.appendChild(ul)
   postContent.appendChild(bt)
