@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const li2 = document.createElement("li");
         const rad1 = document.createElement("input")
         rad1.type = "radio"
-        rad1.name = "option1"
+        rad1.name = "option"
+        rad1.id = "option1"
         rad1.value = 1
         const lab1 = document.createElement("label")
         lab1.innerHTML = group.option1
@@ -70,7 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const li3 = document.createElement("li");
         const rad2 = document.createElement("input")
         rad2.type = "radio"
-        rad2.name = "option2"
+        rad2.name = "option"
+        rad2.id = "option2"
         rad2.value = 2
         const lab2 = document.createElement("label")
         lab2.innerHTML = group.option2
@@ -81,7 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const li4 = document.createElement("li");
         const rad3 = document.createElement("input")
         rad3.type = "radio"
-        rad3.name = "option3"
+        rad3.name = "option"
+        rad3.id = "option3"
         rad3.value = 3
         const lab3 = document.createElement("label")
         lab3.innerHTML = group.option3
@@ -91,9 +94,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const li5 = document.createElement("li");
         li5.appendChild(bt)
-        bt.addEventListener("click", function(){
-            window.alert("Vote submitted Successfully!")
-            window.location.href = "index.html"
+
+        bt.addEventListener("click", async function(){
+            try {
+                if (typeof window.ethereum !== 'undefined') {
+                  const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+                  const web3 = new Web3(window.ethereum);
+                  console.log("MetaMask Connected Accounts:", accounts);
+                  await interact(web3, accounts[0]);
+                  window.alert("Vote submitted Successfully!")
+                  window.location.href = "index.html"
+                } else {
+                  alert('Please install MetaMask or another Ethereum wallet extension.');
+                }
+              } catch (error) {
+                console.error('Error connecting to MetaMask:', error);
+              }
+            
         })
         ul.appendChild(li1);
         ul.appendChild(li2);
@@ -107,3 +124,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+async function interact(web3 , account){
+    try {
+        
+        // const cont =;
+        const contractABI = cont.abi;
+        const id = await web3.eth.net.getId();
+        const { address } = cont.networks[id];
+        const instance = await new web3.eth.Contract(contractABI, address);
+        const o = 1;
+        await instance.methods.vote(1).send({ from: account});
+        console.log(await instance.methods.results().call({ from: account , gas:200000}));
+      } catch (error) {
+        console.error('Error during interaction:', error);
+      }
+}
