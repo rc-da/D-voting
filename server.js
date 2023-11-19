@@ -21,6 +21,17 @@ app.get('/database', async (req, res) => {
   }
 });
 
+app.get('/build/contracts', async (req, res) => {
+  try {
+    const data = await fs.readFile(path.join(__dirname, 'build/contracts', 'voteContract.json'), 'utf8');
+    const abiData = JSON.parse(data);
+    res.json(abiData);
+  } catch (error) {
+    console.error( error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 app.post('/database', async (req, res) => {
   try {
     const { jsonContent, textContent } = req.body;
