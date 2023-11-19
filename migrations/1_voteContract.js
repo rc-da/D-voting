@@ -1,5 +1,5 @@
 const vote = artifacts.require("./contracts/voteContract.sol");
 
-module.exports = function(deployer){
-    deployer.deploy(vote)
+module.exports = async function(deployer){
+    await deployer.deploy(vote)
 }

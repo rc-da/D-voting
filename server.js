@@ -21,7 +21,7 @@ app.get('/database', async (req, res) => {
   }
 });
 
-app.get('/build/contracts', async (req, res) => {
+app.get('/abi/voteContract', async (req, res) => {
   try {
     const data = await fs.readFile(path.join(__dirname, 'build/contracts', 'voteContract.json'), 'utf8');
     const abiData = JSON.parse(data);

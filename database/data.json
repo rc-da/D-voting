@@ -1,20 +1,14 @@
 {
   "allgroup": {
     "1": {
-      "groupName": "gbdfg",
-      "groupQuestion": "sfgvsfg",
-      "option1": "fdbdfb",
-      "option2": "dfbgdfbg",
-      "option3": "fgdf",
-      "groupCode": 1
-    },
-    "2": {
       "groupName": "nothing",
-      "groupQuestion": "rgve",
-      "option1": "srfgvr",
-      "option2": "sedrv",
-      "option3": "sredvg",
-      "groupCode": 2
+      "groupQuestion": "how r u?",
+      "option1": "well",
+      "option2": "good",
+      "option3": "noice",
+      "groupCode": 1,
+      "contractAddress": "0x70f53d4d9273d9280c2303715fc69BA415eDF752",
+      "owner": "0x8bbede35966ca60ba5b8bdca34cf73ff5f2fe9b3"
     }
   }
 }
