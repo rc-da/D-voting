@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dataJSON.groupCode = keysLength;
         dataJSON.contractAddress = contractAddress;
         dataJSON.owner = owner;
+        dataJSON.pollStatus = "Open"
         
         const postData = {
           "jsonContent": dataJSON,

@@ -1,14 +1,4 @@
 {
   "allgroup": {
-    "1": {
-      "groupName": "nothing",
-      "groupQuestion": "how r u?",
-      "option1": "well",
-      "option2": "good",
-      "option3": "noice",
-      "groupCode": 1,
-      "contractAddress": "0x70f53d4d9273d9280c2303715fc69BA415eDF752",
-      "owner": "0x8bbede35966ca60ba5b8bdca34cf73ff5f2fe9b3"
-    }
   }
 }
