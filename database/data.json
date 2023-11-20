@@ -1,4 +1,15 @@
 {
   "allgroup": {
+    "1": {
+      "groupName": "nothing",
+      "groupQuestion": "how r u?",
+      "option1": "nothing",
+      "option2": "now",
+      "option3": "so work",
+      "groupCode": 1,
+      "contractAddress": "0x813Bd70E9681A94A18997083079116Bee6ef93Ef",
+      "owner": "0x8bbede35966ca60ba5b8bdca34cf73ff5f2fe9b3",
+      "pollStatus": "Open"
+    }
   }
 }

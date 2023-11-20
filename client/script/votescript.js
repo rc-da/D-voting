@@ -54,12 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       newGroup.appendChild(ul);
-      newGroup.addEventListener("click", function(){
+      newGroup.addEventListener("click", async function(){
         const booth = document.getElementById("booth");
         const ul = document.getElementById("content")
         const bt = document.createElement("button")
         bt.textContent = "Submit"
         bt.className = "bt"
+
+        const bt2 = document.createElement("button")
+        bt2.textContent = "Close Poll"
+        bt2.className = "bt2"
         
         const li1 = document.createElement("li");
         li1.textContent = group.groupQuestion;
@@ -69,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         rad1.type = "radio"
         rad1.name = "option"
         rad1.id = "option1"
-        rad1.value = 1
+        rad1.value = 0
         const lab1 = document.createElement("label")
         lab1.innerHTML = group.option1
         lab1.setAttribute("for", "option1")
@@ -81,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         rad2.type = "radio"
         rad2.name = "option"
         rad2.id = "option2"
-        rad2.value = 2
+        rad2.value = 1
         const lab2 = document.createElement("label")
         lab2.innerHTML = group.option2
         lab2.setAttribute("for", "option2")
@@ -93,15 +97,35 @@ document.addEventListener("DOMContentLoaded", function () {
         rad3.type = "radio"
         rad3.name = "option"
         rad3.id = "option3"
-        rad3.value = 3
+        rad3.value = 2
         const lab3 = document.createElement("label")
         lab3.innerHTML = group.option3
         lab3.setAttribute("for", "option3")
         li4.appendChild(rad3)
         li4.appendChild(lab3)
 
+        let voteOption;
+
+        rad1.addEventListener("change", function () {
+          if (rad1.checked) {
+              voteOption = rad1.value;
+          }
+        });
+
+        rad2.addEventListener("change", function () {
+            if (rad2.checked) {
+                voteOption = rad2.value;
+            }
+        });
+
+        rad3.addEventListener("change", function () {
+            if (rad3.checked) {
+                voteOption = rad3.value;
+            }
+        });
+
         const li5 = document.createElement("li");
-        li5.appendChild(bt)
+        li5.appendChild(bt);
 
         bt.addEventListener("click", async function(){
             try {
@@ -109,7 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
                   const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
                   const web3 = new Web3(window.ethereum);
                   console.log("MetaMask Connected Accounts:", accounts);
-                  await interact(web3, accounts[0]);
+                  console.log("vote option", voteOption)
+                  const toVote = "vote"
+                  await interact(web3, accounts[0], group.contractAddress, voteOption, toVote);
                   window.alert("Vote submitted Successfully!")
                   window.location.href = "index.html"
                 } else {
@@ -120,11 +146,44 @@ document.addEventListener("DOMContentLoaded", function () {
               }
             
         })
+
+        const li6 = document.createElement("li");
+        li6.appendChild(bt2);
+        li6.style.display = "none";
+        
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const voter =  accounts[0];
+        if(voter == group.owner)
+        {
+          li6.style.display = "block"
+        }
+
+      bt2.addEventListener("click", async function(){
+        try {
+          if (typeof window.ethereum !== 'undefined') {
+            const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+            const web3 = new Web3(window.ethereum);
+            console.log("MetaMask Connected Accounts:", accounts);
+            console.log("vote option", voteOption)
+            const toClose = "close"
+            await interact(web3, accounts[0], group.contractAddress, voteOption, toClose);
+            window.alert("Vote submitted Successfully!")
+            window.location.href = "index.html"
+          } else {
+            alert('Please install MetaMask or another Ethereum wallet extension.');
+          }
+        } catch (error) {
+          console.error('Error connecting to MetaMask:', error);
+        }
+      })
+
+
         ul.appendChild(li1);
         ul.appendChild(li2);
         ul.appendChild(li3);
         ul.appendChild(li4);
         ul.appendChild(li5);
+        ul.appendChild(li6);
         booth.style.display = 'flex';
 
       })
@@ -132,17 +191,31 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-async function interact(web3 , account){
+async function interact(web3 , account, contractAddress, voteOption, action){
     try {
         
-        // const cont =;
+        const abiResponse = await fetch('/abi/voteContract');
+
+        if (!abiResponse.ok) {
+          throw new Error('Failed to fetch ABI');
+        }
+
+        const cont = await abiResponse.json();
+        console.log("abi in json", cont)
         const contractABI = cont.abi;
-        const id = await web3.eth.net.getId();
-        const { address } = cont.networks[id];
+        const address = contractAddress;
         const instance = await new web3.eth.Contract(contractABI, address);
-        const o = 1;
-        await instance.methods.vote(1).send({ from: account});
-        console.log(await instance.methods.results().call({ from: account , gas:200000}));
+
+        if(action == "vote"){
+        const option = voteOption;
+        await instance.methods.vote(option).send({ from: account});
+        }
+
+        if(action == "close"){
+        await instance.methods.close().send({ from: account});
+        }
+
+        console.log(await instance.methods.results().call({ from: account}));
       } catch (error) {
         console.error('Error during interaction:', error);
       }
