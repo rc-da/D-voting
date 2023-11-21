@@ -2,14 +2,25 @@
   "allgroup": {
     "1": {
       "groupName": "nothing",
-      "groupQuestion": "how r u?",
-      "option1": "nothing",
-      "option2": "now",
-      "option3": "so work",
+      "groupQuestion": "gg",
+      "option1": "ntg",
+      "option2": "plg",
+      "option3": "led",
       "groupCode": 1,
-      "contractAddress": "0x813Bd70E9681A94A18997083079116Bee6ef93Ef",
-      "owner": "0x8bbede35966ca60ba5b8bdca34cf73ff5f2fe9b3",
-      "pollStatus": "Open"
+      "contractAddress": "0xBaec6075FbD64EDc8206cf41cD9797C1590f79d1",
+      "owner": "0x500ae05b928bc850a91ac5ae1569bc60cac3d026",
+      "pollStatus": "Close"
+    },
+    "2": {
+      "groupName": "helo",
+      "groupQuestion": "zha",
+      "option1": "nonw",
+      "option2": "meow",
+      "option3": "nono",
+      "groupCode": 2,
+      "contractAddress": "0x1F9509E549ead5bEa23a8dc4998489D7C961b9D5",
+      "owner": "0xbfe2ed3e8d7a8161c5ff49a6a8711385cff522ae",
+      "pollStatus": "Close"
     }
   }
 }

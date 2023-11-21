@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         li5.id = "status"
         ul.appendChild(li5);
       }
-
+      
       newGroup.appendChild(ul);
       newGroup.addEventListener("click", async function(){
         const booth = document.getElementById("booth");
@@ -163,11 +163,33 @@ document.addEventListener("DOMContentLoaded", function () {
           if (typeof window.ethereum !== 'undefined') {
             const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
             const web3 = new Web3(window.ethereum);
-            console.log("MetaMask Connected Accounts:", accounts);
-            console.log("vote option", voteOption)
             const toClose = "close"
             await interact(web3, accounts[0], group.contractAddress, voteOption, toClose);
-            window.alert("Vote submitted Successfully!")
+            const data = await fetch("/database");
+            const dataJson = await data.json();
+            const groupToUpdate = dataJson.allgroup[group.groupCode];
+            
+            if (groupToUpdate) {
+              groupToUpdate.pollStatus = "Close";
+              const dataUpdate = dataJson.allgroup[group.groupCode]
+              const postData = {
+                jsonContent: dataUpdate,
+                textContent: group.groupCode,
+              };
+            
+              await fetch('/database', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postData),
+              });
+            } else {
+              console.error(`Group with code ${group.groupCode} not found.`);
+            }
+            
+            
+            window.alert("Poll closed Successfully!")
             window.location.href = "index.html"
           } else {
             alert('Please install MetaMask or another Ethereum wallet extension.');
@@ -201,7 +223,7 @@ async function interact(web3 , account, contractAddress, voteOption, action){
         }
 
         const cont = await abiResponse.json();
-        console.log("abi in json", cont)
+        // console.log("abi in json", cont)
         const contractABI = cont.abi;
         const address = contractAddress;
         const instance = await new web3.eth.Contract(contractABI, address);

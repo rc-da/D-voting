@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>result</title>
     <link rel="stylesheet" href="../css/result.css">
-    <script src="../script/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>                
     function displayit(){
         overlay.style.display = 'flex';
@@ -42,6 +43,13 @@
 
         <div class="allgroup" id="allgroup">
 
+        </div>
+
+        <div class="booth" id="booth">
+            <div class="boothContent" id="boothContent">
+                <canvas id="myPieChart"></canvas>
+
+            </div>
         </div>
         
     </div>

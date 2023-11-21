@@ -54,4 +54,5 @@ contract voteContract {
         // require(isClosed, "Poll is not closed yet");
         return options;
     }
+
 }
