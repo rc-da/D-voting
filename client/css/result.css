@@ -186,6 +186,22 @@ ul li
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background:linear-gradient(rgb(142, 142, 178), rgb(152, 100, 100));
+    background:linear-gradient(rgb(47, 47, 65), rgb(99, 45, 45));
     z-index: 2;
+}
+
+.canvasBody
+{
+    position: relative;
+    top: 30%;
+    height: 300px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+#Piechart
+{
+    color: #000000;
 }

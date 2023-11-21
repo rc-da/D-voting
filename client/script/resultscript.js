@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 function pieChart(chartData, options){
-    const ctx = document.getElementById('PieChart').getContext('2d');
+    const ctx = document.getElementById('PieChart');
     const myPieChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
