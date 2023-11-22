@@ -46,12 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
           ul.appendChild(li4);
       }
 
-      if (group.pollStatus) {
-        const li5 = document.createElement("li");
-        li5.textContent = group.pollStatus;
-        li5.id = "status"
-        ul.appendChild(li5);
-      }
+      // if (group.pollStatus) {
+      //   const li5 = document.createElement("li");
+      //   li5.textContent = group.pollStatus;
+      //   li5.id = "status"
+      //   ul.appendChild(li5);
+      // }
       
       newGroup.appendChild(ul);
       newGroup.addEventListener("click", async function(){

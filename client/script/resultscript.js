@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (allgroup) {
                 Object.keys(allgroup).forEach(groupKey => {
                     const group = allgroup[groupKey];
-                    addGroup(group);
+                    if(group.pollStatus == "Close"){
+                        addGroup(group);}
                 });
             } else {
                 console.error("Missing 'allgroup' property in the JSON data.");
@@ -45,12 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
             ul.appendChild(li4);
         }
 
-        if (group.pollStatus) {
-            const li5 = document.createElement("li");
-            li5.textContent = group.pollStatus;
-            li5.id = "status"
-            ul.appendChild(li5);
-          }
+        // if (group.pollStatus) {
+        //     const li5 = document.createElement("li");
+        //     li5.textContent = group.pollStatus;
+        //     li5.id = "status"
+        //     ul.appendChild(li5);
+        //   }
   
         newGroup.appendChild(ul);
         newGroup.addEventListener("click", async function(){

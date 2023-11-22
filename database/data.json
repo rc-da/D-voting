@@ -21,6 +21,28 @@
       "contractAddress": "0x1F9509E549ead5bEa23a8dc4998489D7C961b9D5",
       "owner": "0xbfe2ed3e8d7a8161c5ff49a6a8711385cff522ae",
       "pollStatus": "Close"
+    },
+    "3": {
+      "groupName": "Eesala cup namdhe",
+      "groupQuestion": "when will india win ?",
+      "option1": "2027",
+      "option2": "2031",
+      "option3": "2035",
+      "groupCode": 3,
+      "contractAddress": "0x925A7Ae46f294E1Bdf419d3CF79a2Ce35Fb4BD7B",
+      "owner": "0x8bbede35966ca60ba5b8bdca34cf73ff5f2fe9b3",
+      "pollStatus": "Close"
+    },
+    "4": {
+      "groupName": "poll",
+      "groupQuestion": "what r u ?",
+      "option1": "ntg",
+      "option2": "gg",
+      "option3": "bad",
+      "groupCode": 4,
+      "contractAddress": "0x98060C38E3D738150e057C6EE9bf85bb1FC57fBE",
+      "owner": "0x8bbede35966ca60ba5b8bdca34cf73ff5f2fe9b3",
+      "pollStatus": "Open"
     }
   }
 }
