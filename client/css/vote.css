@@ -18,6 +18,10 @@ body, h1, .head, .body, ul
     font-family: 'Gina';
 }
 
+body{
+    background: linear-gradient(90deg, #ca5080,#f8b2b1);
+}
+
 .head
 {
     height: 100px;
@@ -26,7 +30,7 @@ body, h1, .head, .body, ul
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(#dca66d, #b8f0ed);
+    /* background: linear-gradient(#dca66d, #b8f0ed); */
 }
 .overlay , .booth{
     display: none;
@@ -106,7 +110,7 @@ nav
 {
     height: 100%;
     width: 100%;
-    background-color:#b8f0ed;
+    /* background-color:#b8f0ed; */
 }
 
 .searchbar
@@ -149,7 +153,7 @@ nav
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 5%;
+    /* margin-top: 5%; */
 
 }
 .group

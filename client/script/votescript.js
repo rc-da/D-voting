@@ -242,3 +242,12 @@ async function interact(web3 , account, contractAddress, voteOption, action){
         console.error('Error during interaction:', error);
       }
 }
+
+async function searchedPoll(){
+  const searched = document.getElementById("search").value
+  const responseJson = await fetch("/database")
+  const jsonData = await responseJson.json()
+  // console.log("jsondata", jsonData.allgroup[searched])
+}
+
+

@@ -19,6 +19,7 @@ body
     padding: 0;
     border: 0;
     margin:0;
+    background: linear-gradient(45deg, #f04477, #8dcae8);
 }
 
 
@@ -30,7 +31,7 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient( #f1efe9, #f5831fad);
+    /* background: linear-gradient( #f1efe9, #f5831fad); */
 }
 .overlay, .postInfo {
     display: none;
@@ -102,14 +103,14 @@ nav
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#f5831fad;
+    /* background-color:#f5831fad; */
 }
 
 .creation
 {
     height: 470px;
     width: 500px;
-    background-color: #f4e2ab61;
+    background-color: #ffffff22;
     padding: 5%;
     align-items: center;
     text-align: center;

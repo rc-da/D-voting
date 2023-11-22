@@ -17,8 +17,9 @@ body, .head, .menu, .h1, ul, .body, .foot
 }
 body
 {
+    background: linear-gradient(75deg, #f5831faf 30%, #f1efe9);
     
-    background-color: #f1efe9;
+    /* background-color: #f1efe9; */
     font-family: 'Gina';
     /* overflow-x: hidden; */
 }
@@ -33,7 +34,7 @@ p a
 {
     height: 100px;
     width: 100%;
-    background: linear-gradient(#f5841f5a, #f1efe9);
+    /* background: linear-gradient(#f5841f5a, #f1efe9); */
     /* background-color:#dca66d7a; */
 }
 
@@ -107,7 +108,7 @@ li a::after {
     width: 0;
     height: 2px;
     bottom: -8px;
-    background-color: #dca66d;
+    background-color: #f6f5f3;
     transition: width 0.3s;
 }
 

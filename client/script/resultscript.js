@@ -128,6 +128,7 @@ function pieChart(chartData, options){
 
 function pieChart2(chartData, options){
     const ctx = document.getElementById('PieChart2').getContext('2d');
+    Chart.defaults.color = "#000";
     const myPieChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -138,18 +139,29 @@ function pieChart2(chartData, options){
                     'rgba(255, 99, 132, 0.7)',
                     'rgba(75, 192, 192, 0.7)',
                     'rgba(255, 205, 86, 0.7)',
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 205, 86, 1)',
-                ],
-                borderWidth: 1,
+                ]
             }],
         },
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            size: 24,
+                        }
+                    }
+                    
+                },
+                y: {
+                    ticks: {
+                        font: {
+                            size: 24,
+                        }
+                    }
+                }
+            }
         },
     });
   
