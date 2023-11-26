@@ -207,3 +207,8 @@ ul li
 #status{
     color: greenyellow;
 }
+
+#option1, #option2, #option3{
+    align-items: center;
+    justify-content: center;
+}

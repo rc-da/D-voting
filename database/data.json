@@ -23,7 +23,7 @@
       "pollStatus": "Close"
     },
     "3": {
-      "groupName": "Eesala cup namdhe",
+      "groupName": "Cup",
       "groupQuestion": "when will india win ?",
       "option1": "2027",
       "option2": "2031",
@@ -34,14 +34,14 @@
       "pollStatus": "Close"
     },
     "4": {
-      "groupName": "poll",
-      "groupQuestion": "what r u ?",
-      "option1": "ntg",
-      "option2": "gg",
-      "option3": "bad",
+      "groupName": "Tamil Film",
+      "groupQuestion": "Best movie ?",
+      "option1": "LEO",
+      "option2": "Thunivu",
+      "option3": "Jigardhanda",
       "groupCode": 4,
-      "contractAddress": "0x98060C38E3D738150e057C6EE9bf85bb1FC57fBE",
-      "owner": "0x8bbede35966ca60ba5b8bdca34cf73ff5f2fe9b3",
+      "contractAddress": "0xae133Fea639794cbad49C9Bc40582AA67c248D28",
+      "owner": "0xe41073d590dbc502088d7651a5d89101a3da107c",
       "pollStatus": "Open"
     }
   }
