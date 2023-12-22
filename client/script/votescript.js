@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
       
       newGroup.appendChild(ul);
       newGroup.addEventListener("click", async function(){
+        const secretKey = window.prompt("Secret Key")
+        group = decrypt(group, secretKey)
         const booth = document.getElementById("booth");
         const ul = document.getElementById("content")
         const bt = document.createElement("button")
@@ -153,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         const voter =  accounts[0];
+        console.log("before closing", group.owner)
         if(voter == group.owner)
         {
           li6.style.display = "block"
@@ -250,4 +253,21 @@ async function searchedPoll(){
   // console.log("jsondata", jsonData.allgroup[searched])
 }
 
-
+function decrypt(group, secretKey){
+  try{
+  const keys = CryptoJS.enc.Utf8.parse(secretKey);
+  const dataKeys = Object.keys(group);
+  dataKeys.forEach((key) => {
+    if (key == "groupQuestion" || key == "option1" || key == "option2" || key == "option3") {
+      const decrypted = CryptoJS.AES.decrypt(group[key], keys, { mode: CryptoJS.mode.ECB });
+      const decryptedString = decrypted.toString(CryptoJS.enc.Utf8);
+      group[key] = decryptedString
+      console.log(group[key], decryptedString, "decrypt values");
+    }
+  });
+  console.log("before retrunning", group)
+  return group;
+}catch{
+  // window.alert("Wrong secret Key")
+}
+}

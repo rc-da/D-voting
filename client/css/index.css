@@ -148,7 +148,7 @@ li a:hover::before {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 104px;
 }
 
 .logos img 
@@ -158,8 +158,10 @@ li a:hover::before {
 
 .cp:hover, .v:hover, .r:hover
 {
-    border: 2px solid #dca66d;
+    border: 1px solid #ffffff;
     border-radius: 15px ;
+    transform: scale(1.1);
+    transition-duration: 0.1s;
 }
 
 .metaintro h1, .intro h1, .getstarted h1
@@ -201,15 +203,15 @@ li a:hover::before {
     margin-top: 30px;
     padding: 15px 35px;
     border-radius: 35px;
-    color: black;
-    border: 2px solid #f2d2b0;
+    color: #f5841f;  
+    border: 2px solid #f5841f;
     background-color: #f1efe9;
 }
 
 #metaconnect:hover, #connectmeta:hover
 {
-    color: #f5841f;   
-    border-color: #f5841f ;
+    background-color: #f5841f;
+    color: black;
 }
 
 .foot

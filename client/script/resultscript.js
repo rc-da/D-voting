@@ -55,6 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
   
         newGroup.appendChild(ul);
         newGroup.addEventListener("click", async function(){
+            const secretKey = window.prompt("Secret Key")
+            group = decrypt(group, secretKey)
             const booth = document.getElementById("booth");
             try {
                 if (typeof window.ethereum !== 'undefined') {
@@ -166,3 +168,21 @@ function pieChart2(chartData, options){
     });
   
 }
+function decrypt(group, secretKey){
+    try{
+    const keys = CryptoJS.enc.Utf8.parse(secretKey);
+    const dataKeys = Object.keys(group);
+    dataKeys.forEach((key) => {
+      if (key == "groupQuestion" || key == "option1" || key == "option2" || key == "option3") {
+        const decrypted = CryptoJS.AES.decrypt(group[key], keys, { mode: CryptoJS.mode.ECB });
+        const decryptedString = decrypted.toString(CryptoJS.enc.Utf8);
+        group[key] = decryptedString
+        console.log(group[key], decryptedString, "decrypt values");
+      }
+    });
+  
+    return group;
+  }catch{
+    window.alert("Wrong secret Key")
+  }
+  }

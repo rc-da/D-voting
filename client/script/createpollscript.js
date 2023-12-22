@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
+    const secretKey = generateRandomKey();
+    console.log("secret key", secretKey)
     const formdata = new FormData(form);
-    const dataJSON = Object.fromEntries(formdata);
+    let dataJSON = Object.fromEntries(formdata);
+    dataJSON = await encrypting(dataJSON, secretKey)
     const data = await create()
     const owner = data["account"]
     const contractAddress = data["contractAddress"]
@@ -45,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return postResponse.json();
       })
       .then(updatedData => {
-        popup(updatedData)
+        popup(updatedData, secretKey)
       })
       .catch(error => {
         console.error('Error:', error);
@@ -53,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function popup(updatedData)
+function popup(updatedData, secretKey)
 {
   const postInfo = document.getElementById('postInfo')
   const postContent = document.getElementById("postContent")
@@ -67,7 +70,7 @@ function popup(updatedData)
   bt.className = "startbt"
   li1.textContent = `Your Group Name :  "${lastGroup.groupName}"`
   li2.textContent =  `Your Group Code : "${lastGroup.groupCode}"`
-  li3.textContent = ` Click on the Start Vote button , you will be redirected to Vote page.`
+  li3.textContent = ` Security Code :"${secretKey}"`
   ul.appendChild(li1);
   ul.appendChild(li2);
   ul.appendChild(li3);
@@ -125,4 +128,30 @@ async function deployContract(web3, account) {
   } catch (error) {
     console.error('Error deploying contract:', error);
   }
+}
+
+function generateRandomKey() {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let key = '';
+  for (let i = 0; i < 16; i++) {
+    key += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return key;
+}
+
+function encrypting(dataJSON, secretKey) {
+  const keys = CryptoJS.enc.Utf8.parse(secretKey);
+  const dataKeys = Object.keys(dataJSON);
+  dataKeys.forEach((key) => {
+    if (key !== "groupName") {
+      const data = CryptoJS.enc.Utf8.parse(dataJSON[key]);
+      const encrypted = CryptoJS.AES.encrypt(data, keys, { mode: CryptoJS.mode.ECB });
+      dataJSON[key] = encrypted.toString();
+      const decrypted = CryptoJS.AES.decrypt(encrypted.toString(), keys, { mode: CryptoJS.mode.ECB });
+      const decryptedString = decrypted.toString(CryptoJS.enc.Utf8);
+      console.log(dataJSON[key], decryptedString, "decrypt values");
+    }
+  });
+
+  return dataJSON;
 }

@@ -21,8 +21,10 @@ var account = null;
     
                 if (lowercaseAccountCheck === lowercaseAccount) {
                     alert("Yeah Wallet Connected Successfully !");
+                    return true
                 } else {
                     alert("Sorry Wallet is not Connected !!");
+                    return false
                 }
             } catch (error) {
                 console.log("Error:", error);
@@ -38,13 +40,15 @@ var account = null;
                     const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
                     console.log("Connected accounts:", accounts);
                     account = accounts[0];
-                    await messageSign();
+                    const success = await messageSign();
+                    console.log(success)
+                    if(success){
                     const bt = document.getElementById("metaconnect");
-                    bt.innerText = "Connected ✔️";
+                    bt.innerText = "CONNECTED ✔️";
                     bt.style.pointerEvents = "none";
                     const bt2 = document.getElementById("connectmeta");
-                    bt2.innerText = "Connected ✔️";
-                    bt2.style.pointerEvents = "none";
+                    bt2.innerText = "CONNECTED ✔️";
+                    bt2.style.pointerEvents = "none";}
                 } else {
                     alert("MetaMask is not installed !!");
                     window.open("https://metamask.io/")
