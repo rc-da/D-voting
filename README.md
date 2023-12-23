@@ -1,8 +1,8 @@
- **# D-Voting: Decentralized Voting on the Ethereum Blockchain**
+ ** D-Voting: Decentralized Voting on the Ethereum Blockchain**
 
 **Explore a new frontier in democratic participation with D-Voting, a secure and transparent voting platform built on the Ethereum blockchain.**
 
-**## Key Features:**
+** Key Features:**
 
 - **Decentralized voting:** Eliminates the need for centralized authorities, ensuring trust and integrity.
 - **Tamper-proof records:** Blockchain technology safeguards votes from manipulation or fraud.
@@ -10,7 +10,7 @@
 - **Secure voter authentication:** Leverages MetaMask for secure user identification and interaction with the blockchain.
 - **User-friendly interface:** Built with accessibility in mind, allowing for seamless participation.
 
-**## Technologies Used:**
+** Technologies Used:**
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Smart Contracts:** Solidity
@@ -18,7 +18,7 @@
 - **Blockchain Development:** Truffle, Ganache
 - **Wallet Integration:** MetaMask
 
-**## Setup and Deployment:**
+** Setup and Deployment:**
 
 1. **Prerequisites:**
     - Node.js and npm
@@ -41,29 +41,28 @@
     ```
 6. **Start the backend server:**
     ```bash
-    npm run dev
+    npm start
     ```
 7. **Access the frontend:**
     - Open `http://localhost:3000` in your browser.
 8. **Connect MetaMask:**
     - Connect MetaMask to the Ganache network.
 
-**## Contribute:**
+** Contribute:**
 
 - Fork the repository
 - Create a branch for your changes
 - Commit your changes and push to your fork
 - Create a pull request
 
-**## License:**
+** License:**
 
 MIT
 
-**## Future Development:**
+** Future Development:**
 
 - Integration with live Ethereum networks
 - Enhanced security measures
-- Expanded voting features (e.g., ranked-choice voting)
 - User privacy considerations
 - Accessibility improvements
 
