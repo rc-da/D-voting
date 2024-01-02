@@ -100,6 +100,7 @@ async function create() {
       alert('Please install MetaMask or another Ethereum wallet extension.');
     }
   } catch (error) {
+    alert("Accept the Transaction !!!")
     console.error('Error connecting to MetaMask:', error);
   }
 }

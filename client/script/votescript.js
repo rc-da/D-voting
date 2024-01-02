@@ -138,8 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   console.log("vote option", voteOption)
                   const toVote = "vote"
                   await interact(web3, accounts[0], group.contractAddress, voteOption, toVote);
-                  window.alert("Vote submitted Successfully!")
-                  window.location.href = "index.html"
+                  
                 } else {
                   alert('Please install MetaMask or another Ethereum wallet extension.');
                 }
@@ -234,13 +233,17 @@ async function interact(web3 , account, contractAddress, voteOption, action){
         if(action == "vote"){
         const option = voteOption;
         await instance.methods.vote(option).send({ from: account});
+        window.alert("Vote submitted Successfully!")
         }
 
         if(action == "close"){
         await instance.methods.close().send({ from: account});
+        alert("Poll closed successfully!!")
         }
 
         console.log(await instance.methods.results().call({ from: account}));
+        
+        window.location.href = "index.html"
       } catch (error) {
         console.error('Error during interaction:', error);
       }
